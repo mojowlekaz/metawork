@@ -14,7 +14,6 @@ export default function Footer() {
       <a href=''> <img style={{width: '', position: 'relative', height: ''}}  className=""src={require('/Users/macbook/metawork/src/assets/Group 10.png')} />  </a>
       </div>
       <div  className='title'>
-      <h1 className="t">METAWORK</h1>
           <img style={{width: '500px', marginRight: '55px'}}  className=""src={require('/Users/macbook/metawork/src/assets/Group 2.png')} /> 
       </div>
       <p className='yyy'>2022&copy; Metawork. All rights reserved</p>

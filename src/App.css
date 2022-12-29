@@ -19,12 +19,14 @@
   width: 100%;
   height: 220%;
   display: flex;
+  margin-top: 100px;
 }
 .Third{
   background-color: #0F1620; 
 width: 100%;
 height: 220%;
 display: flex;
+margin-top: 70px;
 }
 .Footer{
   background-color: #0F1620; 
@@ -34,7 +36,7 @@ height: 220%;
 .work{
   background-color: #0F1620; 
 width: 100%;
-height: 230%;
+height: 200vh;
 background-image: url('/Users/macbook/metawork/src/assets/Group 1.png');
 background-size: cover;
 }
@@ -52,7 +54,7 @@ nav{
   align-items: center;
   display: flex;
   color: #FFFFFF;
-  gap: 2rem;
+  gap: 5px;
   padding: auto;
 font-family: Space Grotesk;
 font-size: 15px;
@@ -61,6 +63,7 @@ line-height: 23px;
 letter-spacing: 0em;
 text-align: left;
 padding: 25px;
+height: 100px;
 
 }
 nav ul{
@@ -68,9 +71,12 @@ nav ul{
   margin: 0;
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 6rem;
   
   
+}
+span{
+  margin-bottom: 25px;
 }
 
 nav a{
@@ -80,8 +86,8 @@ nav a{
 }
 button{
   box-sizing: border-box;
-  width: 100px;
-  height: 30px;
+  width: 140px;
+  height: 40px;
 background: #0F1A2D;
 border: 1px solid #1560FA;
 color: #FFFFFF;
@@ -106,6 +112,21 @@ letter-spacing: 0em;
 text-align: center;
  border-radius: 3px 15px 3px 3px;
 }
+.btn1{
+  box-sizing: border-box;
+  width: 200px;
+  height: 50px;
+background: #0F1A2D;
+border: 1px solid #1560FA;
+color: #FFFFFF;
+font-family: Space Grotesk;
+font-size: 20px;
+font-weight: 500;
+letter-spacing: 0em;
+text-align: center;
+ border-radius: 3px 15px 3px 3px;
+
+}
 
 .title{
   justify-content: center;
@@ -119,6 +140,7 @@ text-align: center;
   padding: 7%;
   background-image: url('/Users/macbook/metawork/src/assets/Group 1.png');
   background-size: cover;
+  margin-top: 20px;
 }
 p{
   justify-content: center;
@@ -142,14 +164,14 @@ text-align: center;
   margin-right: 100px;
 }
 .third-title{
-  padding-top: 200px;
   padding: 50px;
   margin-right: 60px;
 }
 .work-title{
   align-items: center;
   justify-content: center;
-    text-align: center;
+   text-align: center;
+   
     
 }
 @font-face {
@@ -163,6 +185,7 @@ text-align: center;
 .b{
   font-family: Space Grotesk  !important;
   font-style: normal;
+  font-size: 50px;
 }
 .n{
   font-family: Space Grotesk  !important;
@@ -173,21 +196,41 @@ text-align: center;
 .y{
   font-family: Space Grotesk  !important;
   font-style: normal;
-  font-size: 30px;
+  font-size: 40px;
   color: #FFFFFF;
   justify-content: center;
   align-items: center;
   text-align: center;
+ 
+  
+}
+.drop{
+  height: 100%;
+  width: 100%;
+  transition: .3s ease;
+  background-color: transparent;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .o{
   font-family: Space Grotesk  !important;
   font-style: normal;
   font-size: 20px;
-  color: #FFFFFF;
+  color:  #1560FA;
   justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
 }
+.playicon {
+  color: #FFFFFF;
+  font-size: 2rem;
+  cursor: pointer;
+  left: 50%;
+  bottom: 30%;
+  margin-bottom:  300px ;
+ }
 .oo{
   font-family: Space Grotesk  !important;
   font-style: normal;
@@ -200,10 +243,12 @@ text-align: center;
 .ooo{
   font-family: Space Grotesk  !important;
   font-style: normal;
-  font-size: 12px;
+  font-size: 15px;
   color: #FFFFFF;
-  font-weight: 500;
+  font-weight: 550;
   text-align: left;
+  justify-content: left;
+  align-items: flex-start;
 }
 .r{
   margin-top: 130px;

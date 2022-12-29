@@ -5,15 +5,15 @@ import {RiNumber1,RiNumber2,RiNumber3} from 'react-icons/ri'
 export default function Work() {
   return (
     <div className='work'>
-    <div className='work-title'>
-    <h1 className="y">How Metawork Works</h1>
+    <div className='work-title'>  <br />  <br />  <br />  <br />  <br /> 
+    <h1 className="y">How Metawork Works</h1>  <br />   <br />   <br />  <br />   <br />  
     </div> 
     <div className='whole-box' >
     <div className='big-box'>
     <Box
 sx={{
   width: 300,
-  height: 210, 
+  height: 240, 
   top: 50,
   left: 50,
   overflow: 'hidden',
@@ -41,7 +41,7 @@ sx={{
     <Box
 sx={{
   width: 300,
-  height: 210, 
+  height: 240, 
   top: 50,
   left: 50,
   overflow: 'hidden',
@@ -69,7 +69,7 @@ sx={{
     <Box
 sx={{
   width: 300,
-  height: 210, 
+  height: 240, 
   top: 50,
   left: 50,
   overflow: 'hidden',
@@ -93,9 +93,9 @@ sx={{
        </div>
 </Box>
     </div>
-    </div>   <br />   
+    </div>   <br />    <br />  <br /> 
     <div className='small'>
-    <button className='btn'>Get Started</button> 
+    <button className='btn1'>Get Started</button> 
     </div>
     </div>
   )
