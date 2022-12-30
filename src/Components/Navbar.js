@@ -1,9 +1,9 @@
 import { useRef } from "react";
 import {FaBars, FaTimes} from "react-icons/fa";
 import {useEffect, useState} from 'react';
-
+import {Link, useMatch, useResolvedPath} from "react-router-dom"
 function Navbar(){
-
+  const path = window.location.pathname
     const ethers = require("ethers")
     const [walletAddress, setWalletAddress] = useState("")
     useEffect( () => {
@@ -91,23 +91,20 @@ function Navbar(){
     <nav>
           <span>METAWORK</span>
         <ul>
+          <CustomLink to="/home">Home</CustomLink>
+          <CustomLink to="/arcade">Arcade</CustomLink>
+          <CustomLink to="/lottery">Lottery</CustomLink>
             <li>
-                <a href="">Home</a>
+                <Link to="/play-to-earn">Play To Earn</Link>
             </li>
             <li>
-                <a href="">Arcade</a>
+                <Link to="/jobs">Jobs</Link>
             </li>
             <li>
-                <a href="">Play To Earn</a>
+                <Link to="/about">About</Link>
             </li>
             <li>
-                <a href="">Jobs</a>
-            </li>
-            <li>
-                <a href="">About</a>
-            </li>
-            <li>
-                <a href="">Train To Earn</a>
+                <Link to="/train-to-earn">Train To Earn</Link>
             </li>
 
             <button onClick={connect}>
@@ -175,6 +172,16 @@ function Navbar(){
     }
       }
 }
+}
+
+function CustomLink({to, children, ...props}) {
+  const resolvedPath = useResolvedPath(to);
+  const isActive = useMatch({path: resolvedPath.pathname, end: true})
+  return(
+    <li className= {isActive? "active": ""}>
+      <Link to={to} {...props}>{children}</Link>
+    </li>
+  )
 }
 export default Navbar;
 

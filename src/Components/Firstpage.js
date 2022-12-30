@@ -16,10 +16,10 @@ export default function Firstpage() {
          <button className='btn'>Get Started</button>  <br /> <br />
          <img style={{width: '70px', display: 'flex', justifyContent: 'flex-start', float: 'left', marginTop: '100px'}}  className=""src={require('/Users/macbook/metawork/src/assets/Group 3.png')} /> <br /> <br /> <br />
 
-         <img style={{width: '450px', height:"auto", justifyContent: 'center', alignContent: 'center', marginRight: '90px'}}  className=""src={require('/Users/macbook/metawork/src/assets/Group 2.png')} /> 
+      
          <div className='drop'> 
-    
-         <button className='playicon' >  <IoIosArrowDropdown /></button>
+            <img style={{width: '450px', height:"auto", justifyContent: 'center', alignContent: 'center'}}  className=""src={require('/Users/macbook/metawork/src/assets/Group 2.png')} /> 
+         <a className='playicon' >  <IoIosArrowDropdown className='fa' /></a>
         </div>
 
     </div>
