@@ -10,6 +10,7 @@ import Play from './Pages/Play';
 import Train from './Pages/Train';
 import Jobs from './Pages/Jobs';
 import Arcade from './Pages/Arcade';
+import Lottery from './Pages/Lottery';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
                       path: "/arcade",
                       element: <Arcade/>
                         },
+                        {
+                          path: "/lottery",
+                          element: <Lottery/>
+                            },
   
 ])
 

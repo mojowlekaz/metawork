@@ -91,9 +91,9 @@ function Navbar(){
     <nav>
           <span>METAWORK</span>
         <ul>
-          <CustomLink to="/home">Home</CustomLink>
+          <CustomLink className='ot' to="/home">Home</CustomLink>
           <CustomLink to="/arcade">Arcade</CustomLink>
-          <CustomLink to="/lottery">Lottery</CustomLink>
+          <CustomLink className='ot'  to="/lottery">Lottery</CustomLink>
             <li>
                 <Link to="/play-to-earn">Play To Earn</Link>
             </li>
@@ -119,59 +119,60 @@ function Navbar(){
 
     async function switchN(){
 
-        const provider = window.ethereum;
-        const binanceTestChainId = '0x61';
-        
-    if(!provider){
+      const provider = window.ethereum;
+      const GoerliChainId = '0x5';
       
-        console.log("Metamask is not installed, please install!");
-    }else{
-      
-      const chainId = await provider.request({ method: 'eth_chainId' });
-      
-      if(chainId === binanceTestChainId){
-        
-      console.log("Bravo!, you are on the correct network");
-    }else{
-      
-    console.log("oulalal, switch to the correct network");
-    try {
-      
-        await provider.request({
-        method: 'wallet_switchEthereumChain',
-        params: [{ chainId: binanceTestChainId}],
-      });
-      console.log("You have succefully switched to Binance Test network")
-      
-    } catch (switchError) {
-      // This error code indicates that the chain has not been added to MetaMask.
-      if (switchError.code === 4902) {
-       console.log("This network is not available in your metamask, please add it")
-       try {
-          await provider.request({
-            method: 'wallet_addEthereumChain',
-            params: [
-            { chainId: '0x61', 
-              chainName:'Smart Chain - Testnet',
-              rpcUrls:['https://data-seed-prebsc-1-s1.binance.org:8545'],
-              blockExplorerUrls:['https://testnet.bscscan.com'],
-              nativeCurrency: {
-            symbol:'BNB', // 2-6 characters long
-        decimals: 18
-          }
-              
-              }],
-          });
-        } catch (addError) {
-          // handle "add" error
-          console.log(addError);
-        }
-      }
+  if(!provider){
     
-    }
-    }
+      console.log("Metamask is not installed, please install!");
+  }else{
+    
+    const chainId = await provider.request({ method: 'eth_chainId' });
+    
+    if(chainId === GoerliChainId){
+      
+    console.log("Bravo!, you are on the correct network");
+  }else{
+    
+  console.log("oulalal, switch to the correct network");
+  try {
+    
+      await provider.request({
+      method: 'wallet_switchEthereumChain',
+      params: [{ chainId: GoerliChainId}],
+    });
+    console.log("You have succefully switched to Binance Test network")
+    
+  } catch (switchError) {
+    // This error code indicates that the chain has not been added to MetaMask.
+    if (switchError.code === 4902) {
+     console.log("This network is not available in your metamask, please add it")
+     try {
+        await provider.request({
+          method: 'wallet_addEthereumChain',
+          params: [
+          { chainId: '0x5', 
+            chainName:'Goerli test network',
+            rpcUrls:['https://goerli.infura.io/v3/'],
+            blockExplorerUrls:['https://goerli.etherscan.io'],
+            nativeCurrency: {
+          symbol:'GoerliETH', // 2-6 characters long
+      decimals: 18
+        }
+            
+            }],
+        });
+      } catch (addError) {
+        // handle "add" error
+        console.log(addError);
       }
+    }
+  
+  }
+  }
+    }
 }
+
 }
 
 function CustomLink({to, children, ...props}) {

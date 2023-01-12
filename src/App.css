@@ -51,15 +51,20 @@ span{
 } 
 .thi{
   background-color: #0F1620; 
-  position: relative;
   width: 100%;
-  height: 110vh;
+  height: 70vh;
   justify-content: center;
   align-items: center;
   display: flex;
 }
+.this{
+  background-color: #0F1620; 
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
 .pp{
-  font-size: 100px;
+  font-size: 100px;     
   font-weight: 500;
 }
 nav{
@@ -89,11 +94,30 @@ nav ul{
   
   
 }
+input {
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  display: flex;
+  border:  1px solid #1560FA;
+}
 span{
   margin-bottom: 25px;
 }
-
+.k{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 0px;
+  
+}
 nav a{
+  color:  #FFFFFF; 
+  text-decoration: none;
+  
+}
+.ot{
   color:  #1560FA; 
   text-decoration: none;
   
@@ -111,6 +135,11 @@ font-weight: 500;
 letter-spacing: 0em;
 text-align: center;
  border-radius: 3px 15px 3px 3px;
+}
+
+button:hover {
+  cursor: pointer;
+  transition: all .3s ease-in;
 }
 .btn{
   box-sizing: border-box;
@@ -219,6 +248,13 @@ text-align: center;
   font-family: Space Grotesk  !important;
   font-style: normal;
   font-size: 50px;
+}
+.bb{
+  font-family: Space Grotesk  !important;
+  font-style: normal;
+  font-size: 70px;
+  color: #FFFFFF;
+  margin-top: 90px;
 }
 .n{
   font-family: Space Grotesk  !important;
